@@ -1,16 +1,23 @@
-# React + Vite
+# ESCOR — Marketplace de vehículos con asistente IA
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Marketplace digital de compra y venta de vehículos usados, con catálogo real (NHTSA), buscador en lenguaje natural, comparador y un asistente conversacional integrado.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Node.js](https://nodejs.org/) versión 18 o superior (incluye `npm`).
 
-## React Compiler
+## Cómo arrancarlo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clona el repositorio y entra a la carpeta:
+   git clone <URL-DEL-REPO>
+   cd <NOMBRE-DE-LA-CARPETA>
 
-## Expanding the Oxlint configuration
+2. Instala las dependencias:
+   **npm install**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+3. Levanta el servidor de desarrollo:
+   **npm run dev**
+
+4. Abre en el navegador la URL que aparece en la terminal (normalmente `http://localhost:5173`).
+
+No necesitas configurar ninguna clave de API ni variables de entorno el proyecto ya se conecta directo a APIs públicas gratuitas (NHTSA vPIC para el catálogo, imagin.studio para imágenes).
