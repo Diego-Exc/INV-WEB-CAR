@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Heart } from 'lucide-react'
 import { useVehicleCatalog } from '../context/VehicleCatalogContext.jsx'
 import { formatUSD } from '../services/priceEstimate.js'
-import { getCarImageUrl } from '../services/imaginStudio.js'
+import { getVehicleImageUrl } from '../services/imaginStudio.js'
 
 function getFlavorBadge(vehicle) {
   if (vehicle.isCollector) return 'Colección'
@@ -25,7 +25,7 @@ export default function VehicleCard({ vehicle, onOpenVehicle }) {
   const isComparing = compareIds.includes(vehicle.id)
   const isLive = vehicle.source === 'live'
   const flavorBadge = getFlavorBadge(vehicle)
-  const imageUrl = getCarImageUrl(vehicle.make, vehicle.model)
+  const imageUrl = getVehicleImageUrl(vehicle)
 
   return (
     <article className="vehicle-card hairline">

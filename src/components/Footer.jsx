@@ -3,8 +3,7 @@ export default function Footer() {
     <footer className="footer hairline">
       <div className="container footer__inner">
         <div className="footer__brand">
-          <span className="navbar__mark">E</span>
-          <span className="navbar__word">ESCOR</span>
+          <img className="brand-logo brand-logo--footer" src="/escor-logo.svg" alt="ESCOR Motors Atelier" />
         </div>
         <p className="footer__tagline">
           Marketplace de vehículos usados con datos técnicos oficiales (NHTSA vPIC) e imágenes

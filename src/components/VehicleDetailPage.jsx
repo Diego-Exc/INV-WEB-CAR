@@ -7,7 +7,7 @@ import { useVehicleCatalog } from '../context/VehicleCatalogContext.jsx'
 import { formatUSD } from '../services/priceEstimate.js'
 import { generateTechnicalSheet, generateLegalInfo, generateSalesAgreement } from '../utils/documentGenerator.js'
 import { generateInsight, generateDescription } from '../services/vehicleInsights.js'
-import { getCarImageGallery } from '../services/imaginStudio.js'
+import { getVehicleImageGallery } from '../services/imaginStudio.js'
 import { getAssignedAgent, getUnitCode } from '../services/conciergeAgents.js'
 import RobotIcon from './icons/RobotIcon.jsx'
 
@@ -71,7 +71,7 @@ export default function VehicleDetailPage({ vehicle, onClose, advisorMode, onAct
   }, [vehicle])
 
   const gallery = useMemo(
-    () => (vehicle ? getCarImageGallery(vehicle.make, vehicle.model) : []),
+    () => (vehicle ? getVehicleImageGallery(vehicle) : []),
     [vehicle],
   )
 
